@@ -58,6 +58,13 @@ app.get('/about', (req, res) =>{
   });
 });
 
+//adding the project page
+app.get('/projects', (req, res) =>{
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page'
+  });
+});
+
 app.get('/bad', (req, res) =>{
   res.send({
     errorMassage: 'Error Handling request'
